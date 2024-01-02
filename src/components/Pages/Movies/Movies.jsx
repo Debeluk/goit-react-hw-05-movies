@@ -39,7 +39,7 @@ const Movies = () => {
   };
 
   return (
-    <div className={css.moviesForm}>
+    <div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
