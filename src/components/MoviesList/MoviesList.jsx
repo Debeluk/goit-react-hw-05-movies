@@ -1,7 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import css from '../MoviesList/MoviesList.css';
+import '../MoviesList/MoviesList.css';
 import defaultImage from '../images/notfound.jpg';
+import './MoviesList.css'
 
 export const MoviesList = ({ movies }) => {
   const location = useLocation();

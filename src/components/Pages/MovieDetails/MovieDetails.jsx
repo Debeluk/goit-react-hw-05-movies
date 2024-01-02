@@ -1,7 +1,7 @@
 import { fetchMovieById } from '../../APIService/APIservice';
 import { useEffect, useState, useRef } from 'react';
 import image from '../../images/notfound.jpg';
-import css from './MovieDetails.css';
+import './MovieDetails.css';
 import {
   Link,
   NavLink,
