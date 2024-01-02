@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter as Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 const Home = lazy(() => import('./Pages/Home/Home'));
 const Movies = lazy(() => import('./Pages/Movies/Movies'));
@@ -23,8 +23,6 @@ const App = () => {
     </Suspense>
   );
 };
-
-//test
 
 export default App;
 
