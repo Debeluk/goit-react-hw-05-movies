@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/36.d174deb2.chunk.css","mappings":"AAAA,IAEI,YAAa,CACb,QAAS,CAFT,iBAGJ","sources":["components/Header/Header.css"],"sourcesContent":["nav {\n    padding-left: 40px;\n    display: flex;\n    gap: 40px;\n}"],"names":[],"sourceRoot":""}
