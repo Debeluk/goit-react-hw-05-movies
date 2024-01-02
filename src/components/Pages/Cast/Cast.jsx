@@ -1,7 +1,7 @@
-import { fetchMovieByCast } from '../APIService/APIservice';
+import { fetchMovieByCast } from '../../APIService/APIservice';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import defaultImage from '../images/notfound.jpg';
+import defaultImage from '../../images/notfound.jpg';
 import css from './Cast.css';
 
 const Cast = () => {

@@ -1,7 +1,7 @@
-import { MoviesList } from '../MoviesList/MoviesList';
+import { MoviesList } from '../../MoviesList/MoviesList';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { fetchMoviesByName } from '../APIService/APIservice';
+import { fetchMoviesByName } from '../../APIService/APIservice';
 import css from './Movies.css';
 
 const Movies = () => {

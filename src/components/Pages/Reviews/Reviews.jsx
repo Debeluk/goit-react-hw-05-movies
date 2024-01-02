@@ -1,4 +1,4 @@
-import { fetchMovieByReviews } from '../APIService/APIservice';
+import { fetchMovieByReviews } from '../../APIService/APIservice';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
