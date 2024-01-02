@@ -2,7 +2,6 @@ import { MoviesList } from '../MoviesList/MoviesList';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchMoviesByName } from '../APIService/APIservice';
-import SearchForm from './SearchForm';
 import css from './Movies.css';
 
 const Movies = () => {
@@ -41,11 +40,17 @@ const Movies = () => {
 
   return (
     <div className={css.moviesForm}>
-      <SearchForm
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        handleSubmit={handleSubmit}
-      />
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Enter your query here, please"
+          value={searchQuery}
+          onChange={event => setSearchQuery(event.target.value)}
+        />
+        <button type="submit">
+          Search
+        </button>
+      </form>
       {loading ? (
         <p>Loading...</p>
       ) : error ? (
