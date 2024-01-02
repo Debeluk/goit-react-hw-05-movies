@@ -1,0 +1,9 @@
+#cUl {
+    padding-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#cLi {
+    max-width: 140px;
+}

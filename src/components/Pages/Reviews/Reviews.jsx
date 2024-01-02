@@ -1,6 +1,7 @@
 import { fetchMovieByReviews } from '../../APIService/APIservice';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './Reviews.css';
 
 const Reviews = () => {
   const { moviesId } = useParams();
@@ -29,9 +30,9 @@ const Reviews = () => {
       ) : error ? (
         <p>Error: {error}</p>
       ) : reviews.length ? (
-        <ul>
+        <ul id='rUl'>
           {reviews.map(({ content, author, id }) => (
-            <li key={id}>
+            <li key={id} id='rLi'>
               <h3>Author: {author}</h3>
               <p>{content}</p>
             </li>

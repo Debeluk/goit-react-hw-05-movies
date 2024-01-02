@@ -1,0 +1,13 @@
+#iDiv {
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+#bDiv {
+    display: flex;
+    gap: 40px;
+}
+
+img {
+    padding-top: 20px;
+}

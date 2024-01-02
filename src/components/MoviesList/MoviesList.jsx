@@ -6,13 +6,12 @@ import defaultImage from '../images/notfound.jpg';
 export const MoviesList = ({ movies }) => {
   const location = useLocation();
   return (
-    <ul className={css.list}>
+    <ul>
       {movies.map(({ id, name, title, poster_path }) => (
-        <li key={id} className={css.item}>
+        <li key={id}>
           <Link
             to={`/movies/${id}`}
             state={{ from: location }}
-            className={css.link_movies}
           >
             <img
               src={
@@ -24,7 +23,7 @@ export const MoviesList = ({ movies }) => {
               width="300"
               height="400"
             />
-            <span className={css.description}>{title || name}</span>
+            <span>{title || name}</span>
           </Link>
         </li>
       ))}

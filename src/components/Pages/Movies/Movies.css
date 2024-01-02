@@ -1,0 +1,16 @@
+input {
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+}
+
+form {
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+button {
+    margin-left: 40px;
+    width: 100px;
+    height: 40px;
+}

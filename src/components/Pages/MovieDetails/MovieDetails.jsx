@@ -1,6 +1,7 @@
 import { fetchMovieById } from '../../APIService/APIservice';
 import { useEffect, useState, useRef } from 'react';
 import image from '../../images/notfound.jpg';
+import css from './MovieDetails.css';
 import {
   Link,
   NavLink,
@@ -31,7 +32,7 @@ const MovieDetails = () => {
   const { title, poster_path, release_date, vote_average, overview, genres } =
     movieById;
   return (
-    <div>
+    <div id='iDiv'>
       <Link to={refLocation.current ?? '/'}>Go back</Link>
       <div>
         <img
@@ -56,7 +57,7 @@ const MovieDetails = () => {
         </div>
       </div>
       <div>
-        <div>
+        <div id='bDiv'>
           <NavLink to="cast" state={{ from: from }}>
             Cast
           </NavLink>
