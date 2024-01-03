@@ -1,21 +1,15 @@
 import { fetchMovieById } from '../../APIService/APIservice';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import image from '../../images/notfound.jpg';
 import './MovieDetails.css';
-import {
-  Link,
-  NavLink,
-  Outlet,
-  useLocation,
-  useParams,
-} from 'react-router-dom';
+import { Link, NavLink, Outlet, useLocation, useParams } from 'react-router-dom';
 
 const MovieDetails = () => {
   const { moviesId } = useParams();
   const location = useLocation();
-  const refLocation = useRef(location.state?.location);
   const from = location.state?.from ?? '/';
   const [movieById, setMovieById] = useState(null);
+
   useEffect(() => {
     fetchMovieById(moviesId)
       .then(response => {
@@ -29,11 +23,13 @@ const MovieDetails = () => {
   if (!movieById) {
     return <p>404 Not Found</p>;
   }
+
   const { title, poster_path, release_date, vote_average, overview, genres } =
     movieById;
+
   return (
     <div id='iDiv'>
-      <Link to={refLocation.current ?? '/'}>Go back</Link>
+      <Link to={from}>Go back</Link>
       <div>
         <img
           src={
